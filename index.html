@@ -1,0 +1,625 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Member Christmas?</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+  <style>
+
+  html, body { 
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  background: url() no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  	html { 
+  		background: url(wood-panel-tile-tall-dark.jpg)
+		}
+
+		#video {
+			position: absolute;
+			/*
+			top: 110px;
+			left: 155px;*/
+			z-index: 10;
+			width: 560px;
+			height: 315px;
+		}
+
+		#player {
+			
+		}
+
+		#player-container {
+			position: absolute;
+			top: 34%;
+			left: 24%;
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+#player-container iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+		#whitenoise {
+		}
+
+		.whitenoise {
+			position: absolute;
+			z-index: 11;
+			top: 34%;
+			left: 24%;
+			width: 560px;
+			height: 315px;
+		}
+		.hidden {
+			display: none;
+		}
+
+		#tv {
+			width: 850px;
+			height: 621px;
+			top: 5%;
+			left: 2%;
+			/*
+			top: 40px;
+			left: 25px;*/
+			position: absolute;
+			z-index: 15;
+		}
+
+		#tv-styling-1 {
+			width: 850px;
+			height: 621px;
+			top: 5%;
+			left: 2%;
+
+			/*
+			top: 40px;
+			left: 50px;*/
+			position: absolute;
+			z-index: 13;
+		}
+
+		#stand {
+			position: absolute;
+			z-index: 12;
+			left: 1%;
+			/*left: 10px;*/
+			/*top: 460px;*/
+			top: 60%;
+
+		}
+
+		#dial {
+			z-index: 25;
+			width: 63px;
+			height: 64px;
+			position: fixed;
+			top: 16%;
+			left: 51.10%;
+			/*
+			left: 750px;
+			top: 126px;*/
+			transition: all 0.1s;
+				/*7 = 5; 35 = 6; 70 = 7; 90 = 8; 
+				115 = 9; 135 = 10; 170 = 11; 195 = 12
+				220 = 13; 250 = U; 280 = 2; 310 = 3; 340 = 4*/
+			cursor: -webkit-grab;
+			cursor: -moz-grab;
+		}
+
+		#tree {
+			position: relative;
+			float: right;
+			margin-right: -50px;
+			top: -100px;
+			z-index: 20;
+		}
+
+		/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+  </style>
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="tv-container" class="center">
+	<img src="tv-styling-1.png" id="tv-styling-1">
+	<img src="tv-dark-850.png" id="tv">
+	<img src="dial.png" id="dial">
+	<img src="stand.png" id="stand">
+</div>
+
+<div id=video class="center">
+	<div id="whitenoise" class="whitenoise"></div>
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+	<div id="player-container" class="hidden"><div id="player"></div></div>
+</div>
+
+<img src="tree-6-deco.png" id="tree">
+
+<audio id="whitenoise-audio" src="http://upload.wikimedia.org/wikipedia/commons/archive/6/66/20110423224358%21Whitenoisesound.ogg" autoplay loop></audio>
+ 
+
+  
+    
+
+<script>
+
+	var videos = [{video:"A Garfield Christmas Special", code:"4G0l3dt6ovQ", year:"1987", begin:0, end:1412, duration:1412}, 
+		{video:"The Bells of Fraggle Rock", code:"naX2imUSbCw", year:"1984", begin:0, end:1691, duration:1691}, 
+		{video:"Care Bears Nutcracker Suite Part 1", code:"-AFyj_AfTCI", year:"1988", begin:23, end:381, duration:381}, 
+		{video:"Care Bears Nutcracker Suite Part 2", code:"ho43qh7MvRs", year:"1988", begin:0, end:363, duration:363}, 
+		{video:"Care Bears Nutcracker Suite Part 3", code:"tFQjDmRB2Bc", year:"1988", begin:0, end:349, duration:349},
+		{video:"Care Bears Nutcracker Suite Part 4", code:"sz7ydKAbs_w", year:"1988", begin:0, end:225, duration:225},
+		{video:"A Claymation Christmas Celebration with the California Raisins", code:"Gs--phzj2TQ", year:"1987", begin:0, end:175, duration:175}, 
+		{video:"Alfs Special Christmas 1", code:"uVlJwD75_aM", year:"1987", begin:0, end:0, duration:0}, 
+		{video:"Alfs Special Christmas 2", code:"8vJZEP0cC0Y", year:"1987", begin:0, end:0, duration:0}, 
+		{video:"Alfs Special Christmas Commercial", code:"gWenVxa3Bu0", year:"1987", begin:0, end:0, duration:0}, 
+		{video:"Christmas at Pee-Wee’s Playhouse", code:"d3U428nYrFU", year:"1988", begin:0, end:0, duration:0}, 
+		{video:"A Christmas Dream with Mr. T and Emmanuel Lewis ", code:"e0bqwgwuLLU", year:"1984", begin:0, end:0, duration:0}, 
+		{video:"Beavis and Butt-head Do Christmas", code:"aVWDpfR79c8", year:"1995", begin:10, end:655, duration:645}, 
+		{video:"Beavis and Butt-head Do Christmas Bumper", code:"mco_bzwZHY8", year:"1995", begin:0, end:0, duration:0}, 
+		{video:"A Pinky and the Brain Christmas", code:"Lhj_6U7jAj8", year:"1995", begin:0, end:0, duration:0}, 
+		{video:"Animaniacs - Twas the Day Before Christmas", code:"bFSQAiR2b7g", year:"1993", begin:0, end:0, duration:0}, 
+		{video:"A Muppet Family Christmas - Part 1/4", code:"UvuRo2k8rl4", year:"1987", begin:0, end:0, duration:0},
+		{video:"He-Man & She-Ra - A Christmas Special", code:"pJgeO2wL8zE", year:"1985", begin:0, end:0, duration:0}, 
+		{video:"The Muppet Christmas Carol - Scrooge", code:"4jzsKJvWiEI", year:"1992", begin:0, end:0, duration:0}, 
+		{video:"Muppet Christmas Carol - It Feels Like Christmas", code:"WlRpGj7LWS4", year:"1992", begin:0, end:0, duration:0},
+		{video:"Donald Duck - snow fort", code:"H-aUROKvLew", year:"1942", begin:0, end:0, duration:0},
+		{video:"Mr. Bean", code:"2H-vBYTw26E", year:"", begin:0, end:0, duration:0}
+		]
+
+	var commercials = 
+	[{video:"KFC-ToysRus", code:"DN8J6OOuiTk", year:"1988", begin:0, end:85, duration:85},
+	{video:"Chipmunks", code:"DN8J6OOuiTk", year:"1988", begin:85, end:105, duration:20},
+	{video:"Kellogs", code:"DN8J6OOuiTk", year:"1988", begin:105, end:150, duration:45},
+	{video:"Keyboard Kastle", code:"DN8J6OOuiTk", year:"1988", begin:230, end:260, duration:30},
+	{video:"Gum", code:"DN8J6OOuiTk", year:"1988", begin:290, end:325, duration:35},
+	{video:"Sears", code:"DN8J6OOuiTk", year:"1988", begin:355, end:385, duration:30},
+	{video:"ToysRUs", code:"DN8J6OOuiTk", year:"1988", begin:385, end:421, duration:36},
+	{video:"MinuteMaid", code:"DN8J6OOuiTk", year:"1988", begin:421, end:450, duration:29},
+	{video:"ToysRUs", code:"DN8J6OOuiTk", year:"1988", begin:450, end:471, duration:21},
+	{video:"Chinook", code:"-PZwLxV0p1U", year:"1988", begin:0, end:30, duration:30},
+	{video:"Coke 1", code:"F0D3PusOjkE", year:"", begin:0, end:36, duration:36},
+	{video:"Coke 2", code:"E3Wvb0dapZA", year:"1995", begin:0, end:60, duration:60},
+	{video:"Coke 3", code:"F0D3PusOjkE", year:"", begin:42, end:72, duration:30},
+	{video:"Home Alone 2", code:"vwqDhavhF3o", year:"", begin:0, end:31, duration:31},
+	{video:"Coke 4 Dr Quinn", code:"vwqDhavhF3o", year:"", begin:62, end:112, duration:60},
+	{video:"Kisses", code:"EQUK_CIuboE", year:"", begin:0, end:15, duration:15},
+	{video:"McNuggets", code:"_LBqer1zakY", year:"1983", begin:0, end:30, duration:30},
+	{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
+	{video:"Home Improvement", code:"aUOdYtVcopM", year:"1994", begin:0, end:15, duration:15},
+	{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
+	{video:"ABC Holidy Lineup", code:"CgTVMuV9evo", year:"1992", begin:0, end:241, duration:241},
+	{video:"TGIF", code:"gRRYDAVyDto", year:"1993", begin:0, end:320, duration:320},
+	{video:"Gremlins Cereal", code:"Vj_HARE3t2E", year:"1993", begin:0, end:29, duration:29},
+	{video:"Nintendo 1", code:"jcyslT8U0Pw", year:"1988", begin:0, end:30, duration:30},
+	{video:"Nintendo 2", code:"qRSoxRjzGcc", year:"", begin:0, end:30, duration:30},
+	{video:"Sega", code:"-JE7ajIl5YE", year:"1992", begin:0, end:30, duration:30},
+	{video:"Jello", code:"gq8_HwdGHHA", year:"1992", begin:0, end:31, duration:31},
+	{video:"7UP", code:"gq8_HwdGHHA", year:"1992", begin:32, end:62, duration:30},
+
+
+
+	
+	] 
+
+	/*var commercials = '[{"title:":"", code:"", year:"", begin:"0", end", duration:""},{"title:":"", code:"", year:"", begin:"0", end:"", duration:""},{"title:":"", code:"", year:"", begin:"0", end", duration:""},{"title:":"", code:"", year:"", begin:"0", end:"", duration:""},{"title:":"", code:"", year:"", begin:"0", end", duration:""},{"title:":"", code:"", year:"", begin:"0", end:"", duration:""}]';*/
+
+  // Load the IFrame Player API code asynchronously.
+  /*
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '315',
+      width: '560',
+      videoId: 'M7lc1UVf-VE'
+    });// w640xh360
+  }*/
+
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+
+      var whitenoiseDiv = document.getElementById("whitenoise");
+      var playerContainerDiv = document.getElementById("player-container");
+      var whiteNoiseAudio = document.getElementById("whitenoise-audio");
+      var dial = document.getElementById("dial");
+      var channel = 5;
+      var dialAngleId = 0;
+      var videoCode;
+      var commercialCode;
+      var random;
+      var randomCommercial;
+      var showCommercial = false;
+
+      var startTime, endTime, duration;
+
+      var dialAngles = [7,35,70,90,115,135,170,195,220,250,280,310,340];
+
+      //dial.style.transform = "rotate(" + dialAngles[dialAngleId] + "deg)";
+      var dialAngle = 0;
+      dial.style.transform = "rotate(" + dialAngle + "deg)";
+
+      dial.addEventListener("click", changeChannel);
+
+      showWhiteNoise();
+
+      /*7 = 5; 35 = 6; 70 = 7; 90 = 8; 
+				115 = 9; 135 = 10; 170 = 11; 195 = 12
+				220 = 13; 250 = U; 280 = 2; 310 = 3; 340 = 4*/
+
+			function loadCommercial() {
+				console.log("load commercial");
+				var previous = randomCommercial;
+				while (previous == randomCommercial)
+    			randomCommercial = Math.floor(Math.random(0)*commercials.length);
+    		commercialCode = commercials[randomCommercial].code;
+    		startTime = commercials[randomCommercial].begin;
+      	endTime = commercials[randomCommercial].end;
+      	console.log("commercial code: " + commercialCode);
+      	console.log('startTime: ' + startTime);
+      	console.log('endTime: ' + endTime);
+
+      	player.cueVideoById({'videoId': commercialCode,
+               'startSeconds': startTime,
+               'endSeconds': endTime,
+               'suggestedQuality': 'default'});
+      	player.seekTo(startTime);
+
+      	//setTimeout(stopVideo, endTime * 1000);
+			}
+
+			function changeChannel() {
+				channel++;
+				dialAngle = dialAngle + 27.7;
+				dial.style.transform = "rotate(" + dialAngle + "deg)";
+
+				showWhiteNoise();
+				setTimeout(loadNewVideo, 500);
+			}
+
+			function loadNewVideo() {
+				console.log("load video");
+				if (channel % 13 == 0) {
+      		videoCode = 'mvM2eyk1frk';
+      	} else {
+      		var showCommercial = Math.floor(Math.random(0)*10)
+      		if (showCommercial == 5 || showCommercial == 6) {
+      			loadCommercial();
+      			return;
+      		}
+
+					var previous = random;
+	    		while (previous == random)
+	    			random = Math.floor(Math.random(0)*videos.length);
+	    		//random = 12;
+	      	videoCode = videos[random].code;
+      	}
+				
+      	startTime = videos[random].begin;
+      	endTime = videos[random].end;
+
+      	console.log('startTime: ' + startTime);
+      	console.log('endTime: ' + endTime);
+
+      	player.cueVideoById({'videoId': videoCode,
+               'startSeconds': startTime,
+               'endSeconds': endTime,
+               'suggestedQuality': 'default'});
+      	//player.seekTo(startTime);
+      	player.playVideo();
+      	
+
+      	//setTimeout(stopVideo, endTime * 1000);
+      	
+        //event.target.playVideo();
+			}
+
+			function showWhiteNoise() {
+				whitenoiseDiv.className = "whitenoise";
+    		playerContainerDiv.className = "hidden";
+    		whiteNoiseAudio.volume = 0.1;
+			}
+
+			function hideWhiteNoise() {
+				whitenoiseDiv.className = "hidden";
+      	playerContainerDiv.className = "";
+      	whiteNoiseAudio.volume = 0.0;
+			}
+
+      var player;
+      
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '315',
+          width: '560',
+          videoId: '',
+          playerVars: {
+          	'autoplay': 1,
+          	'cc_load_policy': 0,
+          	'controls': 0,
+          	'disablekb': 0,
+          	'iv_load_policy': 3,
+          	'modestbranding': 1,
+          	'playsinline': 1,
+          	'rel': 0,
+          	'showinfo': 0,
+          	'enablejsapi': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange,
+            'onError': onError
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+      	console.log('player ready');
+      	showWhiteNoise();
+      	loadNewVideo();
+      }
+
+      function onError(event) {
+      	console.log('Error: ' + videoCode);
+      	loadNewVideo();
+      }
+
+      var done = false;
+      function onPlayerStateChange(event) {
+      	if (event.data == YT.PlayerState.ENDED) {
+      		console.log("Ended");
+      		if (channel % 13 == 0) {
+      			player.playVideo(); 
+      		} else {
+      			loadNewVideo();
+      		}
+      	}
+
+      	if (event.data == YT.PlayerState.CUED) {
+      		console.log("cued");
+      		//player.playVideo();
+      		console.log(startTime);
+      		//player.seekTo(startTime);
+      	}
+
+      	if (event.data == YT.PlayerState.PLAYING) {
+      		hideWhiteNoise();
+      	}
+      }
+      function stopVideo() {
+      	console.log("stop video");
+        player.stopVideo();
+        loadNewVideo();
+      }
+
+
+
+      // white noise
+      var tam = 400;
+			function img() {
+			  var width = 20;
+			  var height = 20;
+			  var c = document.createElement("canvas");
+			  c.width = tam;
+			  c.height = tam;
+			  var o = c.getContext("2d");
+			  var x, y;
+
+			  // Draw rectangles is faster than modify ImageData
+			  for(y = 0; y < tam; y+=2) {
+			    for(x = 0; x < tam; x+=2) {
+			      o.fillStyle = Math.random() < .5 ? "#000" : "#FFF";
+			      o.fillRect(x, y, 2,2);
+			    }
+			  }
+			  var img = c.toDataURL();
+			  whitenoiseDiv.style.backgroundImage = "url(\"" + img + "\")";
+			  mexer();
+			}
+			function mexer() {
+			  whitenoiseDiv.style.backgroundPosition = Math.floor(Math.random() * tam) + "px " + Math.floor(Math.random() * tam) + "px";
+			  setTimeout(mexer, 50);
+			}
+
+			img();
+
+		function resize()
+      {
+      	var w = window,
+		    d = document,
+		    e = d.documentElement,
+		    g = d.getElementsByTagName('body')[0],
+		    x = w.innerWidth || e.clientWidth || g.clientWidth,
+		    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+		    //alert(x + " x " + y); //1435x781
+
+		    var tree = document.getElementById("tree");
+		    var tvStyling = document.getElementById("tv-styling-1"); 
+		    var tv = document.getElementById("tv");
+		    var dial = document.getElementById("dial");
+		    var stand = document.getElementById("stand");
+          
+          var height, width;
+
+          // 800 x 1021 = 0.78
+          tree.style.height = y + 200 + "px";
+          var offset = 800 - x < 0 ? 0 - 50 : -300;
+          tree.style.marginRight = offset + "px";
+
+          // 850x621 = 1.37
+          height = y*0.80;
+          width = height*1.37;
+          tvStyling.style.height = height + "px";
+          tvStyling.style.width = width + "px";
+          // 850x621 = 1.37
+          tv.style.height = height + "px";
+          tv.style.width = width + "px";
+
+          // 1000x367 = 2.72
+          height = y*0.45;
+          width = height*2.72;
+          stand.style.height = height + "px";
+          stand.style.width = width + "px";
+
+          height = y*0.085;
+          width = height;
+          dial.style.height = height + "px";
+          dial.style.width = width + "px";
+      }
+      resize();
+      window.onresize = function() {
+          resize();
+      };
+
+</script>
+</body>
+</html>
