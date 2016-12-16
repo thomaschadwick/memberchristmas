@@ -15,236 +15,206 @@
   	margin: 0;
   	padding: 0;
   	overflow: hidden;
-  background: url() no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-  	html { 
-  		background: url(wood-panel-tile-tall-dark.jpg)
-		}
+	  background: url() no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	html { 
+		background: url('wood-panel-tile-tall-dark.jpg');
+	}
 
-		#video {
-			position: absolute;
-			/*
-			top: 110px;
-			left: 155px;*/
-			z-index: 10;
-			width: 560px;
-			height: 315px;
-		}
+	/*#video {
+		position: absolute;
+		/*
+		top: 110px;
+		left: 155px;*//*
+		z-index: 10;
+		width: 560px;
+		height: 315px;
+	}*/
 
-		#player {
-			
-		}
+	#player-container {
+		position: absolute;
+		top: 11%;
+		left: 9.4%;
+		/*padding-bottom:56.25%;
+		padding-top:30px;*/
+		height:0;
+		overflow:hidden;
+	}
 
-		#player-container {
-			position: absolute;
-			top: 34%;
-			left: 24%;
-	position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
-}
+	#player-container iframe {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
 
-#player-container iframe {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-}
+	.whitenoise {
+		position: absolute;
+		z-index: 11;
+		top: 11%;
+		left: 9.4%;
+		width: 560px;
+		height: 315px;
+	}
 
-		#whitenoise {
-		}
+	.hidden {
+		display: none;
+	}
 
-		.whitenoise {
-			position: absolute;
-			z-index: 11;
-			top: 34%;
-			left: 24%;
-			width: 560px;
-			height: 315px;
-		}
-		.hidden {
-			display: none;
-		}
+	#tv {
+		width: 850px;
+		height: 621px;
+		top: 5%;
+		left: 2%;
+		/*
+		top: 40px;
+		left: 25px;*/
+		position: absolute;
+		z-index: 15;
+	}
 
-		#tv {
-			width: 850px;
-			height: 621px;
-			top: 5%;
-			left: 2%;
-			/*
-			top: 40px;
-			left: 25px;*/
-			position: absolute;
-			z-index: 15;
-		}
+	#tv-styling-1 {
+		width: 850px;
+		height: 621px;
+		top: 5%;
+		left: 2%;
 
-		#tv-styling-1 {
-			width: 850px;
-			height: 621px;
-			top: 5%;
-			left: 2%;
+		/*
+		top: 40px;
+		left: 50px;*/
+		position: absolute;
+		z-index: 13;
+	}
 
-			/*
-			top: 40px;
-			left: 50px;*/
-			position: absolute;
-			z-index: 13;
-		}
+	#stand {
+		position: absolute;
+		z-index: 12;
+		left: 1%;
+		/*left: 10px;*/
+		/*top: 460px;*/
+		top: 60%;
 
-		#stand {
-			position: absolute;
-			z-index: 12;
-			left: 1%;
-			/*left: 10px;*/
-			/*top: 460px;*/
-			top: 60%;
+	}
 
-		}
+	#dial {
+		z-index: 25;
+		width: 63px;
+		height: 64px;
+		position: fixed;
+		/*top: 16%;
+		left: 51.10%;*/
+		/*
+		left: 750px;
+		top: 126px;*/
+		transition: all 0.1s;
+			/*7 = 5; 35 = 6; 70 = 7; 90 = 8; 
+			115 = 9; 135 = 10; 170 = 11; 195 = 12
+			220 = 13; 250 = U; 280 = 2; 310 = 3; 340 = 4*/
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+	}
 
-		#dial {
-			z-index: 25;
-			width: 63px;
-			height: 64px;
-			position: fixed;
-			top: 16%;
-			left: 51.10%;
-			/*
-			left: 750px;
-			top: 126px;*/
-			transition: all 0.1s;
-				/*7 = 5; 35 = 6; 70 = 7; 90 = 8; 
-				115 = 9; 135 = 10; 170 = 11; 195 = 12
-				220 = 13; 250 = U; 280 = 2; 310 = 3; 340 = 4*/
-			cursor: -webkit-grab;
-			cursor: -moz-grab;
-		}
+	#tree {
+		position: relative;
+		left: 50%;
+		margin-right: -50px;
+		top: -100px;
+		z-index: 20;
+	}
 
-		#tree {
-			position: relative;
-			float: right;
-			margin-right: -50px;
-			top: -100px;
-			z-index: 20;
-		}
+	#rotate {
+	}
 
-		/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-}
+.ribbon {
+   width: 239px;
+   position: absolute;
+   text-align: center;
+   font-size: 16px!important;
+   background: #d64b4b;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d64b4b), to(#ab2c2c));
+   background: -webkit-linear-gradient(top, #d64b4b, #ab2c2c);
+   background: -moz-linear-gradient(top, #d64b4b, #ab2c2c);
+   background: -ms-linear-gradient(top, #d64b4b, #ab2c2c);
+   background: -o-linear-gradient(top, #d64b4b, #ab2c2c);
+   background-image: -ms-linear-gradient(top, #d64b4b 0%, #ab2c2c 100%);
+   -webkit-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+   -moz-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+   box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+   font-family: 'Helvetica Neue',Helvetica, sans-serif;
+   }
+.ribbon h1 {
+   font-size: 25px!important;
+   color: #401e1e;
+   text-shadow: #d65c5c 0 1px 0;
+   margin:0px;
+   padding: 15px 10px;
+   }
+.ribbon:before, .ribbon:after {
+   content: '';
+   position: absolute;
+   display: block;
+   bottom: -1em;
+   border: 1.5em solid #c23a3a;
+   z-index: -1;
+   }
+.ribbon:before {
+   left: -2em;
+   border-right-width: 1.5em;
+   border-left-color: transparent;
+   -webkit-box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
+   -moz-box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
+   box-shadow: rgba(000,000,000,0.4) 1px 1px 1px;
+   }
+.ribbon:after {
+   right: -2em;
+   border-left-width: 1.5em;
+   border-right-color: transparent;
+   -webkit-box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
+   -moz-box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
+   box-shadow: rgba(000,000,000,0.4) -1px 1px 1px;
+   }
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+   border-color: #871616 transparent transparent transparent;
+   position: absolute;
+   display: block;
+   border-style: solid;
+   bottom: -1em;
+   content: '';
+   }
+.ribbon .ribbon-content:before {
+   left: 0;
+   border-width: 1em 0 0 1em;
+   }
+.ribbon .ribbon-content:after {
+   right: 0;
+   border-width: 1em 1em 0 0;
+   }
+.ribbon-stitches-top {
+   margin-top:2px;
+   border-top: 1px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+   }
+.ribbon-stitches-bottom {
+   margin-bottom:2px;
+   border-top: 1px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+   }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-}
-
-/* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-/* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-/* Styles */
-}
+ #ribbon-container {
+ 	margin-top: 15em;
+ 	margin-left: 3em;
+ 	position: absolute;
+ 	z-index: 2;
+ }
   </style>
 
 
@@ -255,22 +225,36 @@ iPad 3
 
 <body>
 
-<div id="tv-container" class="center">
-	<img src="tv-styling-1.png" id="tv-styling-1">
-	<img src="tv-dark-850.png" id="tv">
-	<img src="dial.png" id="dial">
-	<img src="stand.png" id="stand">
+<div id="rotate" style="">
+	<div id="ribbon-container">
+		<div class="ribbon">
+			<div class="ribbon-stitches-top"></div>
+			<strong class="ribbon-content"><h1>Please Rotate Your Device</h1></strong>
+			<div class="ribbon-stitches-bottom"></div>
+		</div>
+	</div>
+	<img src="tree-6-deco.png" id="tree-rotate" style="position: absolute; z-index: 1; margin-top: -5em;">
 </div>
 
-<div id=video class="center">
-	<div id="whitenoise" class="whitenoise"></div>
-<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-	<div id="player-container" class="hidden"><div id="player"></div></div>
+<div id="main">
+
+	<div id="tv-container" class="center">
+		<img src="tv-styling-1.png" id="tv-styling-1">
+		<img src="tv-dark-850.png" id="tv">
+		<img src="dial.png" id="dial">
+		<img src="stand.png" id="stand">
+	</div>
+
+	<div id=video class="center">
+		<div id="whitenoise" class="whitenoise"></div>
+		<div id="player-container" class="hidden"><div id="player"></div></div>
+	</div>
+
+	<img src="tree-6-deco.png" id="tree">
+
+	<audio id="whitenoise-audio" src="http://upload.wikimedia.org/wikipedia/commons/archive/6/66/20110423224358%21Whitenoisesound.ogg" autoplay loop></audio>
+
 </div>
-
-<img src="tree-6-deco.png" id="tree">
-
-<audio id="whitenoise-audio" src="http://upload.wikimedia.org/wikipedia/commons/archive/6/66/20110423224358%21Whitenoisesound.ogg" autoplay loop></audio>
  
 
   
@@ -358,11 +342,7 @@ iPad 3
   }*/
 
       // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
@@ -411,7 +391,7 @@ iPad 3
                'startSeconds': startTime,
                'endSeconds': endTime,
                'suggestedQuality': 'default'});
-      	player.seekTo(startTime);
+      	player.playVideo();
 
       	//setTimeout(stopVideo, endTime * 1000);
 			}
@@ -580,45 +560,130 @@ iPad 3
 		    x = w.innerWidth || e.clientWidth || g.clientWidth,
 		    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
+		    var main = document.getElementById("main");
+		    var rotate = document.getElementById("rotate");
+
+		    console.log("x: " + x + " y: " + y);
+		    if (x < y) {
+		    	main.style.display = "none";
+		    	rotate.style.display = "";
+		    	rotate.style.width = x + "px";
+		    	rotate.style.height = y + "px";
+		    	hideWhiteNoise();
+		    } else {
+		    	main.style.display = "";
+		    	rotate.style.display = "none";
+		    	var tag = document.createElement('script');
+
+		      tag.src = "https://www.youtube.com/iframe_api";
+		      var firstScriptTag = document.getElementsByTagName('script')[0];
+		      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		    }
 		    //alert(x + " x " + y); //1435x781
 
 		    var tree = document.getElementById("tree");
+		    var treeRotate = document.getElementById("tree-rotate");
 		    var tvStyling = document.getElementById("tv-styling-1"); 
 		    var tv = document.getElementById("tv");
 		    var dial = document.getElementById("dial");
 		    var stand = document.getElementById("stand");
-          
-          var height, width;
+		    var video = document.getElementById("player");
+		    var playerContainer = document.getElementById("player-container");
+		    var whiteNoise = document.getElementById("whitenoise");
+        var height, width;
 
-          // 800 x 1021 = 0.78
-          tree.style.height = y + 200 + "px";
-          var offset = 800 - x < 0 ? 0 - 50 : -300;
-          tree.style.marginRight = offset + "px";
+        // 800 x 1021 = 0.78
+        tree.style.height = y + 200 + "px";
+        treeRotate.style.height = y + 200 + "px";
+        var treeOffset = -50;
+        tree.style.marginRight = treeOffset + "px";
+        if (x < 500 || x/y < 1.4) {
+        	//console.log("left: 90%");
+        	tree.style.left = "60%";
+        } else {
+        	tree.style.left = "50%";
+        }
 
-          // 850x621 = 1.37
-          height = y*0.80;
-          width = height*1.37;
-          tvStyling.style.height = height + "px";
-          tvStyling.style.width = width + "px";
-          // 850x621 = 1.37
-          tv.style.height = height + "px";
-          tv.style.width = width + "px";
+        if (x/y < 1.4) {
+        	whitenoise.style.left = "12%";
+        	playerContainer.style.left = "12%";
 
-          // 1000x367 = 2.72
-          height = y*0.45;
-          width = height*2.72;
-          stand.style.height = height + "px";
-          stand.style.width = width + "px";
+	        height = y*0.45;
+	        width = height* 1.6; //(560/315); //0.5625;
+	        video.style.height = height + "px";
+	        video.style.width = width + "px";
+	        video.height = height + "px";
+	        video.width = width + "px";
+	        //video.style.left = 
+	        playerContainer.style.height = height + "px";
+	        playerContainer.style.width = width + "px";
+	        whitenoise.style.height = height + "px";
+	        whitenoise.style.width = width + "px";
 
-          height = y*0.085;
-          width = height;
-          dial.style.height = height + "px";
-          dial.style.width = width + "px";
+        }
+        
+        // 850x621 = 1.37
+        height = y*0.80;
+        width = height*1.37;
+        tvStyling.style.height = height + "px";
+        tvStyling.style.width = width + "px";
+        // 850x621 = 1.37
+        tv.style.height = height + "px";
+        tv.style.width = width + "px";
+        var tvHeight = height;
+        var tvWidth = width;
+
+        // 1000x367 = 2.72
+        height = y*0.45;
+        width = height*2.72;
+        stand.style.height = height + "px";
+        stand.style.width = width + "px";
+
+        // 85/86 = 1
+        height = y*0.085;
+        width = height;
+        dial.style.height = height + "px";
+        dial.style.width = width + "px";
+        var left = 0.02*x;
+        left = left + (tvWidth/500)*410;
+        var top = 0.05*y;
+        top = top + (tvHeight/366)*51;
+
+        console.log("left: " + left);
+        dial.style.left = left + "px";
+        dial.style.top = top + "px";
+
+        //434px to center
+        //411px to left edge
+        //500 wide
+        //54px to top edge
+        //366px height
+
+        // 315/560 = 0.5625
+        height = y*0.45;
+        width = height* 1.6; //(560/315); //0.5625;
+        video.style.height = height + "px";
+        video.style.width = width + "px";
+        video.height = height + "px";
+        video.width = width + "px";
+        //video.style.left = 
+        playerContainer.style.height = height + "px";
+        playerContainer.style.width = width + "px";
+        whitenoise.style.height = height + "px";
+        whitenoise.style.width = width + "px";
+
+
+
       }
       resize();
       window.onresize = function() {
           resize();
       };
+
+      window.addEventListener("orientationchange", function() {
+      	window.location.reload();
+			}, false);
 
 </script>
 </body>
