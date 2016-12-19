@@ -762,6 +762,10 @@
 	window.onresize = function() {
 		resize();
 	};
+	
+	window.onscroll = function() {
+		resize();
+	};
 
 	window.addEventListener("orientationchange", function() {
 		window.location.reload();
