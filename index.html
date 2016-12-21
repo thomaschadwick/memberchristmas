@@ -1,15 +1,10 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Member Christmas?</title>
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
-	
 	<!--
                                                                                                            
                                                                                                            
@@ -171,8 +166,6 @@
 		position: absolute;
 		top: 11%;
 		left: 9.4%;
-		/*padding-bottom:56.25%;
-		padding-top:30px;*/
 		height:0;
 		overflow:hidden;
 	}
@@ -203,34 +196,15 @@
 		height: 621px;
 		top: 5%;
 		left: 2%;
-		/*
-		top: 40px;
-		left: 25px;*/
 		position: absolute;
 		z-index: 15;
-	}
-
-	#tv-styling-1 {
-		width: 850px;
-		height: 621px;
-		top: 5%;
-		left: 2%;
-
-		/*
-		top: 40px;
-		left: 50px;*/
-		position: absolute;
-		z-index: 13;
 	}
 
 	#stand {
 		position: absolute;
 		z-index: 12;
 		left: 1%;
-		/*left: 10px;*/
-		/*top: 460px;*/
 		top: 60%;
-
 	}
 
 	#dial {
@@ -238,11 +212,6 @@
 		width: 63px;
 		height: 64px;
 		position: fixed;
-		/*top: 16%;
-		left: 51.10%;*/
-		/*
-		left: 750px;
-		top: 126px;*/
 		transition: all 0.1s;
 			/*7 = 5; 35 = 6; 70 = 7; 90 = 8; 
 			115 = 9; 135 = 10; 170 = 11; 195 = 12
@@ -254,8 +223,6 @@
 	#tree {
 		position: relative;
 		left: 50%;
-		margin-right: -50px;
-		top: -100px;
 		z-index: 20;
 	}
 
@@ -365,32 +332,23 @@
 			<div class="ribbon-stitches-bottom"></div>
 		</div>
 	</div>
-	<img src="tree-6-deco.png" id="tree-rotate" style="position: absolute; z-index: 1; margin-top: -5em;">
+	<img src="tree-7-deco.png" id="tree-rotate" style="position: absolute; z-index: 1; width: 100%; height: 100%;"">
 </div>
 
 <div id="main">
-
 	<div id="tv-container" class="center">
-		<img src="tv-styling-1.png" id="tv-styling-1">
-		<img src="tv-dark-850.png" id="tv">
+		<img src="tv-dark-850-2.png" id="tv">
 		<img src="dial.png" id="dial">
 		<img src="stand.png" id="stand">
 	</div>
-
 	<div id=video class="center">
 		<div id="whitenoise" class="whitenoise"></div>
 		<div id="player-container" class="hidden"><div id="player"></div></div>
 	</div>
-
-	<img src="tree-6-deco.png" id="tree">
-
+	<img src="tree-7-deco.png" id="tree">
 	<audio id="whitenoise-audio" src="http://upload.wikimedia.org/wikipedia/commons/archive/6/66/20110423224358%21Whitenoisesound.ogg" autoplay loop></audio>
 
 </div>
- 
-
-  
-    
 
 <script>
 
@@ -473,22 +431,18 @@
 				220 = 13; 250 = U; 280 = 2; 310 = 3; 340 = 4*/
 
 	function loadCommercial() {
-		//console.log("load commercial");
 		var previous = randomCommercial;
 		while (previous == randomCommercial)
 			randomCommercial = Math.floor(Math.random(0)*commercials.length);
 		commercialCode = commercials[randomCommercial].code;
 		startTime = commercials[randomCommercial].begin;
-      	endTime = commercials[randomCommercial].end;
-      	console.log("commercial code: " + commercialCode);
-      	console.log('startTime: ' + startTime);
-      	console.log('endTime: ' + endTime);
+  	endTime = commercials[randomCommercial].end;
 
-      	player.cueVideoById({'videoId': commercialCode,
-               'startSeconds': startTime,
-               'endSeconds': endTime,
-               'suggestedQuality': 'default'});
-      	player.playVideo();
+  	player.cueVideoById({'videoId': commercialCode,
+           'startSeconds': startTime,
+           'endSeconds': endTime,
+           'suggestedQuality': 'default'});
+  	player.playVideo();
 	}
 
 	function changeChannel() {
@@ -501,7 +455,6 @@
 	}
 
 	function loadNewVideo() {
-		//console.log("load video");
 		if (channel % 13 == 0) {
       			videoCode = 'mvM2eyk1frk';
 		} else {
@@ -524,7 +477,6 @@
 			   'startSeconds': startTime,
 			   'endSeconds': endTime,
 			   'suggestedQuality': 'default'});
-		//player.seekTo(startTime);
 		player.playVideo();
 	}
 
@@ -565,6 +517,7 @@
             'onError': onError
           }
 		});
+		loadNewVideo();
 	}
 
 	function onPlayerReady(event) {
@@ -587,20 +540,14 @@
 				loadNewVideo();
 			}
 		}
+  	if (event.data == YT.PlayerState.CUED) {
 
-      	if (event.data == YT.PlayerState.CUED) {
-      		//console.log("cued");
-      		//player.playVideo();
-      		//console.log(startTime);
-      		//player.seekTo(startTime);
-      	}
-
-      	if (event.data == YT.PlayerState.PLAYING) {
-      		hideWhiteNoise();
-      	}
+  	}
+  	if (event.data == YT.PlayerState.PLAYING) {
+  		hideWhiteNoise();
+  	}
 	}
 	function stopVideo() {
-		//console.log("stop video");
 		player.stopVideo();
 		loadNewVideo();
 	}
@@ -656,16 +603,14 @@
 			main.style.display = "";
 			rotate.style.display = "none";
 			var tag = document.createElement('script');
-
 		  tag.src = "https://www.youtube.com/iframe_api";
 		  var firstScriptTag = document.getElementsByTagName('script')[0];
 		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 		}
 
 		var tree = document.getElementById("tree");
 		var treeRotate = document.getElementById("tree-rotate");
-		var tvStyling = document.getElementById("tv-styling-1"); 
+		//var tvStyling = document.getElementById("tv-styling-1"); 
 		var tv = document.getElementById("tv");
 		var dial = document.getElementById("dial");
 		var stand = document.getElementById("stand");
@@ -675,17 +620,25 @@
 		var height, width;
 
 		// 800 x 1021 = 0.78
-		tree.style.height = y + 200 + "px";
-		treeRotate.style.height = y + 200 + "px";
-		var treeOffset = -50;
-		tree.style.marginRight = treeOffset + "px";
+		//tree.style.height = y + 200 + "px";
+		//treeRotate.style.height = y + 200 + "px";
+		//var treeOffset = -50;
+		//tree.style.marginRight = treeOffset + "px";
 
-		if (x < 500 || x/y < 1.4) {
+		//console.log ("x: " + x + " y: " + y);
+
+		var treeHeight = 1.2*y;
+		var treeWidth = treeHeight * 0.78;			// 0.78
+		tree.style.height = treeHeight + "px";
+		tree.style.width = treeWidth + "px";
+		tree.style.marginTop = "-5%";
+
+		if (x < 1200 || x/y < 1.4) {
 			tree.style.left = "60%";
 		} else if (x > 1440) {
-			//tree.style.left = "70%";
-			tree.style.width = "50%";
-			tree.style.height = "50%";
+			/*tree.style.left = "50%";
+			tree.style.height = (treeHeight * 1.5) + "px";
+			tree.style.width = (treeWidth * 1.5) + "px";*/
 		} else {
 			tree.style.left = "50%";
 		}
@@ -699,7 +652,6 @@
 			video.style.width = width + "px";
 			video.height = height + "px";
 			video.width = width + "px";
-			//video.style.left = 
 			playerContainer.style.height = height + "px";
 			playerContainer.style.width = width + "px";
 			whitenoise.style.height = height + "px";
@@ -709,8 +661,8 @@
 		// 850x621 = 1.37
 		height = y*0.80;
 		width = height*1.37;
-		tvStyling.style.height = height + "px";
-		tvStyling.style.width = width + "px";
+		//tvStyling.style.height = height + "px";
+		//tvStyling.style.width = width + "px";
 		// 850x621 = 1.37
 		tv.style.height = height + "px";
 		tv.style.width = width + "px";
@@ -750,10 +702,15 @@
 		video.style.width = width + "px";
 		video.height = height + "px";
 		video.width = width + "px";
+		left = 0.02*x + (105/850)*tvWidth;
+		// edge of tv = 113px
+		// 850 x 621
 		playerContainer.style.height = height + "px";
 		playerContainer.style.width = width + "px";
+		playerContainer.style.left = left + "px";
 		whitenoise.style.height = height + "px";
 		whitenoise.style.width = width + "px";
+		whitenoise.style.left = left + "px";
 	}
       
 	resize();
