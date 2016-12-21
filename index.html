@@ -419,18 +419,27 @@
 		{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
 		{video:"Home Improvement", code:"aUOdYtVcopM", year:"1994", begin:0, end:15, duration:15},
 		{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
+		{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
+		{video:"Simpsons", code:"pKJtXkVU0Mw", year:"", begin:0, end:31, duration:31},
 		{video:"ABC Holidy Lineup", code:"CgTVMuV9evo", year:"1992", begin:0, end:241, duration:241},
 		{video:"TGIF", code:"gRRYDAVyDto", year:"1993", begin:0, end:320, duration:320},
 		{video:"Gremlins Cereal", code:"Vj_HARE3t2E", year:"1993", begin:0, end:29, duration:29},
 		{video:"Nintendo 1", code:"jcyslT8U0Pw", year:"1988", begin:0, end:30, duration:30},
+		{video:"Nintendo 1", code:"jcyslT8U0Pw", year:"1988", begin:0, end:30, duration:30},
+		{video:"Nintendo 1", code:"jcyslT8U0Pw", year:"1988", begin:0, end:30, duration:30},
+		{video:"Nintendo 2", code:"qRSoxRjzGcc", year:"", begin:0, end:30, duration:30},
+		{video:"Nintendo 2", code:"qRSoxRjzGcc", year:"", begin:0, end:30, duration:30},
 		{video:"Nintendo 2", code:"qRSoxRjzGcc", year:"", begin:0, end:30, duration:30},
 		{video:"Sega", code:"-JE7ajIl5YE", year:"1992", begin:0, end:30, duration:30},
+		{video:"Jello", code:"gq8_HwdGHHA", year:"1992", begin:0, end:31, duration:31},
+		{video:"Jello", code:"gq8_HwdGHHA", year:"1992", begin:0, end:31, duration:31},
+		{video:"Jello", code:"gq8_HwdGHHA", year:"1992", begin:0, end:31, duration:31},
 		{video:"Jello", code:"gq8_HwdGHHA", year:"1992", begin:0, end:31, duration:31},
 		{video:"7UP", code:"gq8_HwdGHHA", year:"1992", begin:32, end:62, duration:30},
 		{video:"Kisses", code:"EQUK_CIuboE", year:"", begin:0, end:15, duration:15},
 		{video:"Santa Clause", code:"t067u2Jnks0", year:"", begin:0, end:0, duration:0},
 		{video:"Scrooged", code:"9ajwSBuozVs", year:"", begin:0, end:0, duration:0}
-		] 
+		]  
 
 	var whitenoiseDiv = document.getElementById("whitenoise");
 	var playerContainerDiv = document.getElementById("player-container");
@@ -484,7 +493,10 @@
       			videoCode = 'mvM2eyk1frk';
 		} else {
       		var showCommercial = Math.floor(Math.random(0)*10)
-      		if (showCommercial == 5 || showCommercial == 6) {
+      		if (showCommercial == 5 
+      				|| showCommercial == 6 
+      				|| showCommercial == 7
+      				|| showCommercial == 4) {
       			loadCommercial();
 				return;
 			}
